@@ -1,0 +1,33 @@
+{
+  "name": "swc-tsc-backend-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/src/main.js",
+  "scripts": {
+    "watch:dist": "node watcher.js",
+    "dev:tsc": "concurrently --raw \"tsc --watch\" \"pnpm watch:dist\""
+  },
+  "_moduleAliases": {
+    "@": "./dist/src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "^1.7.23",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.3.5",
+    "chokidar": "^3.6.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^3.4.4",
+    "express": "^4.19.2",
+    "module-alias": "^2.2.3",
+    "react": "^18.3.1"
+  }
+}
