@@ -5,7 +5,10 @@
   "main": "./dist/src/main.js",
   "scripts": {
     "watch:dist": "node watcher.js",
-    "dev:tsc": "concurrently --raw \"tsc --watch\" \"pnpm watch:dist\""
+    "dev:tsc": "concurrently --raw \"tsc --watch\" \"node --watch dist/src/main.js\"",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsc",
+    "start": "node dist/src/main.ts"
   },
   "_moduleAliases": {
     "@": "./dist/src"
@@ -22,6 +25,7 @@
     "chokidar": "^3.6.0",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
   },
   "dependencies": {
